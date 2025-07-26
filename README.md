@@ -1,0 +1,1 @@
+# vs_code_extension_chat_ai
