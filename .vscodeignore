@@ -1,0 +1,7 @@
+**/*.map
+**/test/**
+**/__tests__/**
+.vscode/
+.vscode-test/
+.git/
+!.vscode/extensions

@@ -1,0 +1,55 @@
+{
+  "name": "my-hf-agent",
+  "version": "1.0.0",
+  "main": "./out/extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3",
+    "vsce": "^2.10.0",
+    "vscode": "^1.1.37"
+  },
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.enhanceTask",
+    "onCommand:extension.storeSnippet",
+    "onCommand:extension.querySnippet"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.enhanceTask",
+        "title": "🤖 Enhance Task with Hugging Face2"
+      },
+      {
+        "command": "extension.storeSnippet",
+        "title": "💾 Store Code in Qdrant"
+      },
+      {
+        "command": "extension.querySnippet",
+        "title": "🔍 Query Code in Qdrant"
+      }
+    ]
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.5.3",
+    "@qdrant/js-client-rest": "^1.15.0",
+    "dotenv": "^17.2.1",
+    "openai": "^5.10.2"
+  }
+}
